@@ -1,7 +1,15 @@
 <template>
     <div>
         <mt-header fixed title="个人中心"></mt-header>
-        <div id="test" style="background:red;">123</div>
+        <div id="test">
+            <div class="bg_user">
+                <div class="user_picture"></div>
+                <div>
+                    <p>{{name}}</p>
+                    <p>{{number}}</p>
+                </div>
+            </div>
+        </div>
         <NavBottom selected="4"></NavBottom>
     </div>
 </template>
@@ -14,7 +22,9 @@ export default {
     },
     data () {
         return {
-            a:1
+            a:1,
+            name:'桑金超',
+            number:'2016010226'
         }
     },
     methods:{
@@ -38,10 +48,20 @@ export default {
     }
 }
 </script>
-
-<style lang="less" scoped>
-#test{
-    background: yellow!important;
-}
+<style>
+    html,body{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<style scoped>
+    #test{
+        /*background: yellow!important;*/
+    }
+    .bg_user{
+        margin:12% 0 0 0;
+        background: url(../../assets/img/bg_user.jpg) no-repeat center center;
+        background-size: 100% 100%;
+    }
 </style>
 
